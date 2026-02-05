@@ -193,18 +193,53 @@ footer{
   font-size:1.4rem;
 }
 
-/* STICKY */
-#sticky-footer{
+/* SOCIAL FLOAT RIGHT */
+#social-float{
   position:fixed;
-  bottom:-80px;
-  left:50%;
-  transform:translateX(-50%);
+  bottom:30px;
+  right:30px;
   display:flex;
-  gap:15px;
-  background:#111;
-  padding:12px 22px;
-  border-radius:30px;
-  transition:.4s;
+  flex-direction:column;
+  gap:14px;
+  z-index:9999;
+
+  opacity:0;
+  transform:translateY(40px);
+  transition:.5s ease;
 }
-#sticky-footer.show{ bottom:20px; }
-#sticky-footer a{ color:white; }
+
+#social-float.show{
+  opacity:1;
+  transform:translateY(0);
+}
+
+.social{
+  width:54px;
+  height:54px;
+  border-radius:16px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background:rgba(15,18,26,.85);
+  backdrop-filter:blur(12px);
+  transition:.25s ease;
+}
+
+.social img{
+  width:26px;
+  height:26px;
+  filter:invert(1);
+}
+
+.social:hover{
+  transform:scale(1.15);
+  box-shadow:0 0 25px rgba(255,255,255,.25);
+}
+
+/* Couleurs hover */
+.social.discord:hover{ background:#5865F2; }
+.social.tiktok:hover{ background:#000; }
+.social.instagram:hover{
+  background:linear-gradient(45deg,#f58529,#dd2a7b,#8134af);
+}
+.social.youtube:hover{ background:#ff0000; }
