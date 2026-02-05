@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Astralium RP - Règlement Officiel</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        :root {
+            --bg: #0b0f1a;
+            --bg-card: #12182b;
+            --primary: #7c7cff;
+            --secondary: #5eead4;
+            --text: #e5e7eb;
+            --muted: #9ca3af;
+            --danger: #ef4444;
+        }
+
+        * { box-sizing: border-box; }
+
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(180deg, #0b0f1a, #050814);
+            color: var(--text);
+        }
+
+        header {
+            padding: 40px 20px;
+            text-align: center;
+            background: radial-gradient(circle at top, #1b2250, #0b0f1a);
+            border-bottom: 1px solid #1f2937;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.6rem;
+            color: var(--primary);
+            letter-spacing: 2px;
+        }
+
+        header p {
+            margin-top: 10px;
+            color: var(--muted);
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: 260px 1fr;
+            min-height: calc(100vh - 160px);
+        }
+
+        nav {
+            background: var(--bg-card);
+            border-right: 1px solid #1f2937;
+            padding: 20px;
+        }
+
+        nav h2 {
+            font-size: 1rem;
+            text-transform: uppercase;
+            color: var(--muted);
+            margin-bottom: 15px;
+        }
+
+        nav button {
+            width: 100%;
+            background: transparent;
+            border: none;
+            color: var(--text);
+            text-align: left;
+            padding: 12px 10px;
+            margin-bottom: 6px;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+
+        nav button:hover {
+            background: #1f2937;
+            color: var(--secondary);
+        }
+
+        main {
+            padding: 30px;
+        }
+
+        section {
+            display: none;
+        }
+
+        section.active {
+            display: block;
+        }
+
+        .card {
+            background: var(--bg-card);
+            padding: 25px;
+            border-radius: 12px;
+            border: 1px solid #1f2937;
+            margin-bottom: 20px;
+        }
+
+        .card h3 {
+            margin-top: 0;
+            color: var(--primary);
+        }
+
+        ul {
+            padding-left: 20px;
+        }
+
+        ul li {
+            margin-bottom: 8px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            color: var(--muted);
+            border-top: 1px solid #1f2937;
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 900px) {
+            .container {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>Astralium RP</h1>
+    <p>Règlement officiel du serveur Astralium RP. Lecture obligatoire avant toute connexion.</p>
+</header>
+
+<div class="container">
+    <nav>
+        <h2>Règlement</h2>
+        <button onclick="showSection('debuter')">Bien débuter</button>
+        <button onclick="showSection('hrp')">Règlement HRP</button>
+        <button onclick="showSection('global')">Règlement Global</button>
+        <button onclick="showSection('legal')">Règlement Légal</button>
+        <button onclick="showSection('illegal')">Règlement Illégal</button>
+        <button onclick="showSection('gouvernement')">Gouvernement</button>
+        <button onclick="showSection('immobilier')">Agence Immobilière</button>
+    </nav>
+
+    <main>
+        <section id="debuter" class="active">
+            <div class="card">
+                <h3>Bien débuter</h3>
+                <ul>
+                    <li>Pseudo RP obligatoire (Nom + Prénom).</li>
+                    <li>Lecture complète du règlement obligatoire.</li>
+                    <li>Respect du Fear RP et du New Life Rule.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="hrp">
+            <div class="card">
+                <h3>Règlement HRP</h3>
+                <ul>
+                    <li>Respect obligatoire envers tous.</li>
+                    <li>Interdiction du meta-gaming et power-gaming.</li>
+                    <li>Aucun abus de bug ou glitch.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="global">
+            <div class="card">
+                <h3>Règlement Global</h3>
+                <ul>
+                    <li>Scènes réalistes et cohérentes.</li>
+                    <li>FreeKill et FreePunch interdits.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="legal">
+            <div class="card">
+                <h3>Règlement Légal</h3>
+                <ul>
+                    <li>Respect du code de la route.</li>
+                    <li>Entreprises RP cohérentes.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="illegal">
+            <div class="card">
+                <h3>Règlement Illégal</h3>
+                <ul>
+                    <li>RP préparé obligatoire.</li>
+                    <li>Pas de scènes illégales abusives.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="gouvernement">
+            <div class="card">
+                <h3>Gouvernement</h3>
+                <ul>
+                    <li>Gestion des lois et annonces officielles.</li>
+                    <li>Abus de pouvoir sanctionné.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="immobilier">
+            <div class="card">
+                <h3>Agence Immobilière</h3>
+                <ul>
+                    <li>Ventes justifiées RP.</li>
+                    <li>Prix cohérents.</li>
+                </ul>
+            </div>
+        </section>
+    </main>
+</div>
+
+<footer>
+    © 2026 Astralium RP – Tous droits réservés
+</footer>
+
+<script>
+    function showSection(id) {
+        document.querySelectorAll('main section').forEach(sec => {
+            sec.classList.remove('active');
+        });
+        document.getElementById(id).classList.add('active');
+    }
+</script>
+
+</body>
+</html>
