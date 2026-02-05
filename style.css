@@ -72,4 +72,44 @@ nav a{color:white;text-decoration:none}
 .rules li{
   padding:10px;
   border-bottom:1px solid rgba(255,255,255,.2);
+
+  .social-footer{
+  margin-top:80px;
+  padding:40px 20px 25px;
+  text-align:center;
+  background:rgba(0,0,0,.65);
+  backdrop-filter:blur(12px);
+}
+
+.social-footer p{
+  font-size:1.2rem;
+  margin-bottom:20px;
+  opacity:.85;
+}
+
+.socials{
+  display:flex;
+  justify-content:center;
+  gap:30px;
+  margin-bottom:20px;
+}
+
+.socials img{
+  width:38px;
+  height:38px;
+  filter:brightness(0) invert(1);
+  opacity:.75;
+  transition:.3s;
+}
+
+.socials img:hover{
+  opacity:1;
+  transform:scale(1.15);
+}
+
+.social-footer span{
+  font-size:.85rem;
+  opacity:.6;
+}
+
 }
