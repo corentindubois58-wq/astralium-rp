@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<title>Règlement – Astralium RP</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body class="dark">
+
+<section class="section">
+  <h2>Règlement Officiel Astralium RP</h2>
+
+  <ul class="rules">
+    <li>Respect total entre joueurs</li>
+    <li>No HRP en scène RP</li>
+    <li>Fear RP obligatoire</li>
+    <li>PowerGaming interdit</li>
+    <li>MetaGaming interdit</li>
+  </ul>
+
+  <button class="btn" onclick="acceptRules()">
+    ✅ J’accepte le règlement
+  </button>
+</section>
+
+<script>
+function acceptRules(){
+  localStorage.setItem("rulesAccepted","true");
+  window.location.href = "index.html";
+}
+</script>
+
+</body>
+</html>
