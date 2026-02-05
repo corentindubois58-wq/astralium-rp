@@ -4,6 +4,12 @@ document.addEventListener("DOMContentLoaded", () => {
      CONFIG SERVEUR
   =============================== */
   const SERVER_CFX = "6avj7j";
+  const DISCORD_INVITE = "https://discord.gg/mZQnxRFAZt";
+
+  // ⚠️ Mets ici le lien du salon whitelist Discord
+  // ex : https://discord.com/channels/123456789/987654321
+  const DISCORD_WHITELIST_CHANNEL =
+    "https://discord.gg/2CzKQpGvAD";
 
 
   /* ===============================
@@ -62,12 +68,44 @@ document.addEventListener("DOMContentLoaded", () => {
      RÈGLEMENT OBLIGATOIRE
   =============================== */
   window.checkRules = function(e){
+    e.preventDefault();
+
     if(localStorage.getItem("rulesAccepted") !== "true"){
-      e.preventDefault();
       window.location.href = "reglement.html";
-    }else{
-      window.open("https://cfx.re/join/6avj7j", "_blank");
+      return;
     }
+
+    window.open(`https://cfx.re/join/${SERVER_CFX}`, "_blank");
+  };
+
+
+  /* ===============================
+     WHITELIST DISCORD LIÉE AU SITE
+  =============================== */
+  window.checkWhitelist = function(e){
+    e.preventDefault();
+
+    // 1️⃣ Règlement accepté ?
+    if(localStorage.getItem("rulesAccepted") !== "true"){
+      window.location.href = "reglement.html";
+      return;
+    }
+
+    // 2️⃣ Discord rejoint ?
+    if(localStorage.getItem("discordJoined") !== "true"){
+      window.open(DISCORD_INVITE, "_blank");
+
+      alert(
+        "Rejoins le Discord puis reviens sur le site pour continuer la whitelist."
+      );
+
+      // On considère qu'il a rejoint (logique site statique)
+      localStorage.setItem("discordJoined", "true");
+      return;
+    }
+
+    // 3️⃣ Accès whitelist Discord
+    window.open(DISCORD_WHITELIST_CHANNEL, "_blank");
   };
 
 });
