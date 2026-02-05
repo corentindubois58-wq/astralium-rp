@@ -4,18 +4,77 @@
 <meta charset="UTF-8">
 <title>Astralium RP</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <link rel="stylesheet" href="style.css">
 <script defer src="app.js"></script>
+
+<style>
+.hero{
+  min-height:100vh;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+  padding:40px;
+}
+
+.hero h1{
+  font-size:4.5rem;
+  letter-spacing:2px;
+  text-shadow:0 0 40px rgba(255,255,255,.5);
+}
+
+.hero p{
+  margin-top:15px;
+  font-size:1.4rem;
+  opacity:.85;
+}
+
+.buttons{
+  margin-top:40px;
+  display:flex;
+  gap:20px;
+  flex-wrap:wrap;
+  justify-content:center;
+}
+
+.stats{
+  display:flex;
+  gap:70px;
+  margin-top:80px;
+  flex-wrap:wrap;
+}
+
+.stat{
+  background:rgba(255,255,255,.12);
+  padding:30px 45px;
+  border-radius:25px;
+  backdrop-filter:blur(16px);
+}
+
+.stat h3{
+  font-size:3.2rem;
+  margin-bottom:5px;
+}
+
+.status{
+  margin-top:25px;
+  font-size:1.2rem;
+}
+</style>
 </head>
 
 <body>
 
+<!-- VIDEO BACKGROUND -->
 <div class="video-bg">
   <video autoplay muted loop playsinline>
     <source src="background.mp4" type="video/mp4">
   </video>
 </div>
 
+<!-- NAV -->
 <nav>
   <a href="index.html">Accueil</a>
   <a href="reglement.html">Règlement</a>
@@ -23,29 +82,49 @@
   <a href="https://discord.gg/mZQnxRFAZt" target="_blank">Discord</a>
 </nav>
 
+<!-- HERO -->
 <section class="hero">
-  <h1>Astralium RP</h1>
-  <p id="server-status">Chargement du serveur...</p>
 
-  <div class="stats">
-    <div class="stat">
-      <h3 id="players">--</h3>
-      Joueurs connectés
-    </div>
-    <div class="stat">
-      <h3 id="status-dot">●</h3>
-      Statut serveur
-    </div>
+  <h1>Astralium RP</h1>
+  <p>Le serveur FiveM nouvelle génération</p>
+
+  <div class="status" id="server-status">
+    Chargement du serveur...
   </div>
 
   <div class="buttons">
+
+    <!-- DISCORD -->
     <a class="btn"
-       id="connect-btn"
+       href="https://discord.gg/mZQnxRFAZt"
+       target="_blank">
+       Rejoindre le Discord
+    </a>
+
+    <!-- CONNECT -->
+    <a class="btn"
        href="#"
        onclick="checkRules(event)">
        Se connecter au serveur
     </a>
+
   </div>
+
+  <!-- STATS -->
+  <div class="stats">
+
+    <div class="stat">
+      <h3 id="players">--</h3>
+      Joueurs connectés
+    </div>
+
+    <div class="stat">
+      <h3 id="status-dot">●</h3>
+      Statut serveur
+    </div>
+
+  </div>
+
 </section>
 
 </body>
