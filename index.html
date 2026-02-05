@@ -7,161 +7,107 @@
 
 <link rel="stylesheet" href="style.css">
 <script defer src="app.js"></script>
-
-<style>
-.hero{
-  min-height:100vh;
-  display:flex;
-  flex-direction:column;
-  justify-content:center;
-  align-items:center;
-  text-align:center;
-  padding:40px;
-}
-
-.hero h1{
-  font-size:4.5rem;
-  letter-spacing:2px;
-  text-shadow:0 0 40px rgba(255,255,255,.5);
-}
-
-.hero p{
-  margin-top:15px;
-  font-size:1.4rem;
-  opacity:.85;
-}
-
-.buttons{
-  margin-top:40px;
-  display:flex;
-  gap:20px;
-  flex-wrap:wrap;
-  justify-content:center;
-}
-
-.stats{
-  display:flex;
-  gap:70px;
-  margin-top:80px;
-  flex-wrap:wrap;
-}
-
-.stat{
-  background:rgba(255,255,255,.12);
-  padding:30px 45px;
-  border-radius:25px;
-  backdrop-filter:blur(16px);
-}
-
-.stat h3{
-  font-size:3.2rem;
-  margin-bottom:5px;
-}
-
-.status{
-  margin-top:25px;
-  font-size:1.2rem;
-}
-</style>
 </head>
 
 <body>
 
-<!-- VIDEO BACKGROUND -->
-<div class="video-bg">
-  <video autoplay muted loop playsinline>
-    <source src="background.mp4" type="video/mp4">
-  </video>
-</div>
-
 <!-- NAV -->
-<nav>
-  <a href="index.html">Accueil</a>
-  <a href="reglement.html">Règlement</a>
-  <a href="wiki.html">Wiki</a>
-  <a href="https://discord.gg/mZQnxRFAZt" target="_blank">Discord</a>
-</nav>
+<header class="navbar">
+  <div class="logo">ASTR<span>ALIUM</span></div>
+  <nav>
+    <a href="#home">Accueil</a>
+    <a href="reglement.html">Règlement</a>
+    <a href="wiki.html">Wiki</a>
+    <a href="#avis">Avis</a>
+    <a href="https://discord.gg/mZQnxRFAZt" target="_blank">Discord</a>
+  </nav>
+</header>
 
 <!-- HERO -->
-<section class="hero">
+<section class="hero" id="home">
+  <div class="hero-bg"></div>
 
-  <h1>Astralium RP</h1>
-  <p>Le serveur FiveM nouvelle génération</p>
+  <div class="hero-content">
+    <h1>ASTRALIUM RP</h1>
+    <p>L’expérience RolePlay nouvelle génération</p>
 
-  <div class="status" id="server-status">
-    Chargement du serveur...
-  </div>
-
-  <!-- BOUTONS -->
-  <div class="buttons">
-
-    <!-- DISCORD -->
-    <a class="btn"
-       href="https://discord.gg/mZQnxRFAZt"
-       target="_blank">
-       Rejoindre le Discord
-    </a>
-
-    <!-- CONNEXION SERVEUR -->
-    <a class="btn"
-       href="#"
-       onclick="checkRules(event)">
-       Se connecter au serveur
-    </a>
-
-    <!-- WHITELIST -->
-    <a class="btn"
-       href="#"
-       onclick="checkWhitelist(event)">
-       Accéder à la whitelist
-    </a>
-
-  </div>
-
-  <!-- STATS -->
-  <div class="stats">
-
-    <div class="stat">
-      <h3 id="players">--</h3>
-      Joueurs connectés
+    <div class="hero-buttons">
+      <a href="https://discord.gg/mZQnxRFAZt" target="_blank" class="btn discord">
+        Discord
+      </a>
+      <a href="#" class="btn play" onclick="checkRules(event)">
+        Jouer maintenant
+      </a>
     </div>
 
-    <div class="stat">
-      <h3 id="status-dot">●</h3>
-      Statut serveur
+    <div class="scroll-indicator">
+      SCROLL
+      <span>⌄</span>
     </div>
-
   </div>
-
 </section>
 
-<!-- FOOTER CLASSIQUE -->
-<footer class="social-footer">
-  <p>Nous suivre sur les réseaux</p>
-
-  <div class="socials">
-    <a href="https://youtube.com/" target="_blank" aria-label="YouTube">
-      <img src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png" alt="YouTube">
-    </a>
-
-    <a href="https://www.tiktok.com/" target="_blank" aria-label="TikTok">
-      <img src="https://cdn-icons-png.flaticon.com/512/3046/3046121.png" alt="TikTok">
-    </a>
-
-    <a href="https://www.instagram.com/" target="_blank" aria-label="Instagram">
-      <img src="https://cdn-icons-png.flaticon.com/512/1384/1384063.png" alt="Instagram">
-    </a>
+<!-- STATUS -->
+<section class="status-section">
+  <div class="status-card">
+    <h3 id="players">--</h3>
+    <span>Joueurs connectés</span>
   </div>
 
-  <span>© 2026 Astralium RP</span>
+  <div class="status-card">
+    <h3 id="server-status">Chargement...</h3>
+    <span>Statut serveur</span>
+  </div>
+</section>
+
+<!-- TRAILER -->
+<section class="section">
+  <h2>Notre trailer</h2>
+  <p>Découvrez l’univers Astralium RP</p>
+
+  <div class="video-container">
+    <video controls poster="trailer-cover.jpg">
+      <source src="trailer.mp4" type="video/mp4">
+    </video>
+  </div>
+</section>
+
+<!-- AVIS -->
+<section class="section dark" id="avis">
+  <h2>Ce que disent nos joueurs</h2>
+
+  <div class="reviews" id="reviews"></div>
+
+  <form class="review-form" id="reviewForm">
+    <input type="text" id="pseudo" placeholder="Votre pseudo" required>
+    <textarea id="message" placeholder="Votre avis..." required></textarea>
+    <button type="submit">Envoyer</button>
+  </form>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-left">
+    <strong>Astralium RP</strong>
+    <p>Rejoignez l’aventure dès maintenant</p>
+  </div>
+
+  <div class="footer-socials">
+    <a href="https://youtube.com" target="_blank">▶</a>
+    <a href="https://vm.tiktok.com/ZNd2N5AqR/" target="_blank">🎵</a>
+    <a href="https://www.instagram.com" target="_blank">📸</a>
+  </div>
+
+  <span class="copyright">
+    © 2026 Astralium RP
+  </span>
 </footer>
 
-<!-- FOOTER STICKY INTELLIGENT -->
+<!-- FOOTER STICKY -->
 <div id="sticky-footer">
-  <a href="https://discord.gg/mZQnxRFAZt" target="_blank" title="Discord">💬</a>
-  <a href="https://vm.tiktok.com/ZNd2N5AqR/" target="_blank" title="TikTok">🎵</a>
-  <a href="https://www.instagram.com/" target="_blank" title="Instagram">📸</a>
-  <a href="https://youtube.com/" target="_blank" title="YouTube">▶️</a>
+  <a href="https://discord.gg/mZQnxRFAZt" target="_blank">💬</a>
+  <a href="https://vm.tiktok.com/ZNd2N5AqR/" target="_blank">🎵</a>
+  <a href="https://youtube.com" target="_blank">▶</a>
 </div>
 
 </body>
