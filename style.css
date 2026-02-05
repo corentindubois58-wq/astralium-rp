@@ -111,5 +111,37 @@ nav a{color:white;text-decoration:none}
   font-size:.85rem;
   opacity:.6;
 }
+#sticky-footer{
+  position:fixed;
+  bottom:20px;
+  left:50%;
+  transform:translateX(-50%);
+  display:flex;
+  gap:22px;
+  padding:14px 26px;
+  background:rgba(0,0,0,.65);
+  backdrop-filter:blur(14px);
+  border-radius:40px;
+  z-index:2000;
+  opacity:0;
+  pointer-events:none;
+  transition:.4s;
+}
+
+#sticky-footer.show{
+  opacity:1;
+  pointer-events:auto;
+}
+
+#sticky-footer a{
+  font-size:1.6rem;
+  text-decoration:none;
+  filter:brightness(1.2);
+  transition:.3s;
+}
+
+#sticky-footer a:hover{
+  transform:scale(1.2);
+}
 
 }
