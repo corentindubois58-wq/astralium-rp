@@ -7,144 +7,224 @@
 
 <style>
 :root{
- --glass:rgba(255,255,255,.12);
- --muted:rgba(255,255,255,.75);
- --glow:0 0 35px rgba(255,255,255,.35);
- --bg:#0b0f1a;
+  --glass:rgba(255,255,255,.12);
+  --muted:rgba(255,255,255,.75);
+  --glow:0 0 35px rgba(255,255,255,.35);
 }
 
 *{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
+
 body{
- font-family:Segoe UI,sans-serif;
- color:#fff;
- background:#000;
- overflow-x:hidden;
+  font-family:Segoe UI,sans-serif;
+  color:white;
+  background:#000;
+  overflow-x:hidden;
 }
 
-/* LOADER */
-#loader{
- position:fixed;inset:0;
- background:#000;
- display:flex;
- align-items:center;
- justify-content:center;
- z-index:9999;
-}
-#loader span{
- width:60px;height:60px;
- border:4px solid #fff;
- border-top-color:transparent;
- border-radius:50%;
- animation:spin 1s linear infinite;
-}
-@keyframes spin{to{transform:rotate(360deg)}}
-
-/* VIDEO BG */
+/* VIDEO BACKGROUND */
 .video-bg{
- position:fixed;
- inset:0;
- z-index:-2;
+  position:fixed;
+  inset:0;
+  z-index:-2;
 }
 .video-bg video{
- width:100%;height:100%;
- object-fit:cover;
- filter:brightness(.5);
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  filter:brightness(.45);
 }
 
-/* PARTICLES */
-canvas{
- position:fixed;
- inset:0;
- z-index:-1;
+/* FALLBACK BACKGROUND */
+.fallback{
+  position:fixed;
+  inset:0;
+  background:linear-gradient(-45deg,#1e1e3f,#6a0572,#ff4d6d,#ffb347);
+  background-size:400% 400%;
+  animation:bg 18s ease infinite;
+  z-index:-3;
+}
+@keyframes bg{
+  0%{background-position:0% 50%}
+  50%{background-position:100% 50%}
+  100%{background-position:0% 50%}
 }
 
 /* NAV */
 nav{
- position:fixed;top:0;width:100%;
- padding:18px;
- display:flex;justify-content:center;gap:40px;
- background:rgba(0,0,0,.4);
- backdrop-filter:blur(14px);
- z-index:1000;
+  position:fixed;
+  top:0;
+  width:100%;
+  padding:18px;
+  display:flex;
+  justify-content:center;
+  gap:40px;
+  background:rgba(0,0,0,.4);
+  backdrop-filter:blur(14px);
+  z-index:1000;
 }
-nav a{color:#fff;text-decoration:none;opacity:.8}
+nav a{
+  color:white;
+  text-decoration:none;
+  opacity:.8;
+}
 nav a:hover{opacity:1}
 
 /* HERO */
 .hero{
- min-height:100vh;
- display:flex;flex-direction:column;
- align-items:center;justify-content:center;
- text-align:center;padding:40px;
+  min-height:100vh;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  padding:40px;
 }
 .hero h1{
- font-size:4.5rem;
- text-shadow:var(--glow);
+  font-size:4.5rem;
+  text-shadow:var(--glow);
 }
 .hero p{
- margin-top:10px;
- color:var(--muted);
- font-size:1.4rem;
+  margin-top:10px;
+  font-size:1.4rem;
+  color:var(--muted);
 }
+
 .buttons{
- margin-top:40px;
- display:flex;gap:20px;flex-wrap:wrap;
+  margin-top:40px;
+  display:flex;
+  gap:20px;
+  flex-wrap:wrap;
+  justify-content:center;
 }
 .btn{
- padding:15px 30px;
- border-radius:30px;
- border:none;
- background:var(--glass);
- color:white;
- backdrop-filter:blur(14px);
- cursor:pointer;
- transition:.3s;
+  padding:15px 30px;
+  border-radius:30px;
+  border:none;
+  background:var(--glass);
+  color:white;
+  backdrop-filter:blur(14px);
+  cursor:pointer;
+  transition:.3s;
 }
 .btn:hover{
- transform:translateY(-4px);
- box-shadow:var(--glow);
+  transform:translateY(-4px);
+  box-shadow:var(--glow);
 }
 
 /* SECTION */
 .section{
- padding:140px 20px;
- background:rgba(0,0,0,.55);
- text-align:center;
+  padding:140px 20px;
+  background:rgba(0,0,0,.55);
+  text-align:center;
 }
-.section h2{font-size:2.8rem;margin-bottom:20px}
+.section h2{
+  font-size:2.8rem;
+  margin-bottom:20px;
+}
 .section p{
- max-width:900px;margin:auto;
- color:var(--muted);
+  max-width:900px;
+  margin:auto;
+  color:var(--muted);
+  font-size:1.1rem;
 }
 
 /* STATS */
 .stats{
- display:flex;justify-content:center;
- gap:80px;margin-top:80px;
- flex-wrap:wrap;
+  display:flex;
+  justify-content:center;
+  gap:80px;
+  margin-top:80px;
+  flex-wrap:wrap;
 }
 .stat{
- background:var(--glass);
- padding:30px 40px;
- border-radius:20px;
- backdrop-filter:blur(15px);
+  background:var(--glass);
+  padding:30px 40px;
+  border-radius:20px;
+  backdrop-filter:blur(15px);
 }
-.stat h3{font-size:3rem}
+.stat h3{
+  font-size:3rem;
+}
 
-/* MODAL */
-#rules{
- position:fixed;inset:0;
- background:rgba(0,0,0,.7);
- display:flex;
- align-items:center;
- justify-content:center;
- z-index:2000;
+/* FOOTER */
+footer{
+  padding:30px;
+  text-align:center;
+  background:rgba(0,0,0,.7);
+  color:var(--muted);
 }
-#rules .box{
- background:#111;
- padding:40px;
- border-radius:20px;
- max-width:500px;
- text-ali
-gn:left;
+
+@media(max-width:700px){
+  .hero h1{font-size:3rem}
+  .stats{gap:40px}
+}
+</style>
+</head>
+
+<body>
+
+<!-- FALLBACK -->
+<div class="fallback"></div>
+
+<!-- VIDEO -->
+<div class="video-bg">
+  <video autoplay muted loop playsinline
+    onerror="this.style.display='none'">
+    <source src="background.mp4" type="video/mp4">
+  </video>
+</div>
+
+<nav>
+  <a href="#home">Accueil</a>
+  <a href="#reglement">Règlement</a>
+  <a href="#discord">Discord</a>
+  <a href="#boutique">Boutique</a>
+</nav>
+
+<section class="hero" id="home">
+  <h1>Astralium RP</h1>
+  <p>Le serveur FiveM nouvelle génération</p>
+
+  <div class="buttons">
+    <button class="btn"
+      onclick="window.open('https://discord.gg/TONLIEN','_blank')">
+      Discord
+    </button>
+    <button class="btn"
+      onclick="window.location.href='fivem://connect/cfx.re'">
+      Se connecter
+    </button>
+  </div>
+</section>
+
+<section class="section" id="reglement">
+  <h2>Une expérience RP ultime</h2>
+  <p>
+    Astralium RP est un serveur immersif et sérieux,
+    pensé pour offrir une expérience roleplay
+    moderne, cohérente et ambitieuse.
+  </p>
+
+  <div class="stats">
+    <div class="stat">
+      <h3>+5 000</h3>
+      Membres
+    </div>
+    <div class="stat">
+      <h3>+250</h3>
+      Joueurs / jour
+    </div>
+    <div class="stat">
+      <h3>+40</h3>
+      Factions
+    </div>
+  </div>
+</section>
+
+<footer>
+  © 2026 Astralium RP — Tous droits réservés
+</footer>
+
+</body>
+</html>
