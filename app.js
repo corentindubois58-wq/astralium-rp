@@ -1,27 +1,3 @@
-const SERVER_CFX = "6avj7j";
-
-/* STATUS SERVEUR */
-async function fetchStatus(){
-  try{
-    const res = await fetch(
-      `https://servers-frontend.fivem.net/api/servers/single/${SERVER_CFX}`
-    );
-    const data = await res.json();
-
-    document.getElementById("players").textContent =
-      data.Data.players.length;
-
-    document.getElementById("server-status").textContent =
-      "🟢 En ligne";
-  }catch{
-    document.getElementById("players").textContent = "0";
-    document.getElementById("server-status").textContent =
-      "🔴 Hors ligne";
-  }
-}
-fetchStatus();
-setInterval(fetchStatus,15000);
-
 /* FOOTER STICKY */
 let lastScroll = 0;
 const footer = document.getElementById("sticky-footer");

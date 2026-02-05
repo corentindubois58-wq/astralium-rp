@@ -104,21 +104,6 @@ body{
   100%{ transform:translateY(0); }
 }
 
-/* STATUS */
-.status-section{
-  display:flex;
-  justify-content:center;
-  gap:60px;
-  padding:80px 20px;
-}
-
-.status-card{
-  background:rgba(255,255,255,.06);
-  padding:30px 60px;
-  border-radius:20px;
-  text-align:center;
-}
-
 /* SECTIONS */
 .section{
   padding:100px 20px;
