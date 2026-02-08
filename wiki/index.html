@@ -1,132 +1,92 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-<meta charset="UTF-8">
-<title>Wiki – Astralium RP</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <title>Wiki Astralium RP</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<link rel="stylesheet" href="../style.css">
-
-<style>
-/* WIKI */
-.wiki-container{
-  padding:140px 60px 80px;
-  max-width:1200px;
-  margin:auto;
-}
-
-.wiki-title{
-  font-size:3.5rem;
-  margin-bottom:10px;
-}
-
-.wiki-sub{
-  opacity:.7;
-  margin-bottom:60px;
-}
-
-.wiki-grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-  gap:25px;
-}
-
-.wiki-card{
-  background:rgba(255,255,255,.06);
-  border-radius:20px;
-  overflow:hidden;
-  transition:.3s;
-}
-
-.wiki-card:hover{
-  transform:translateY(-6px);
-  box-shadow:0 20px 40px rgba(0,0,0,.4);
-}
-
-.wiki-card img{
-  width:100%;
-  height:160px;
-  object-fit:cover;
-}
-
-.wiki-card .content{
-  padding:20px;
-}
-
-.wiki-card h3{
-  margin-bottom:8px;
-}
-
-.back-home{
-  margin-top:80px;
-  display:inline-block;
-  color:#ff6b6b;
-  text-decoration:none;
-  font-weight:600;
-}
-</style>
+  <link rel="stylesheet" href="wiki.css">
 </head>
-
 <body>
 
-<!-- NAV -->
-<header class="navbar">
-  <div class="logo">ASTR<span>ALIUM</span></div>
-  <nav>
-    <a href="../index.html">Accueil</a>
-    <a href="../reglement.html">Règlement</a>
-    <a href="index.html">Wiki</a>
-    <a href="https://discord.gg/mZQnxRFAZt" target="_blank">Discord</a>
-  </nav>
-</header>
-
-<!-- WIKI -->
-<section class="wiki-container">
-
-  <h1 class="wiki-title">Wiki Astralium RP</h1>
-  <p class="wiki-sub">
-    Toutes les informations essentielles pour jouer sur Astralium RP.
-  </p>
-
-  <div class="wiki-grid">
-
-    <div class="wiki-card">
-      <img src="https://images.unsplash.com/photo-1535909339361-9b3c27c84c62">
-      <div class="content">
-        <h3>Aide</h3>
-        <p>Débuter sur Astralium RP, commandes, FAQ.</p>
-      </div>
-    </div>
-
-    <div class="wiki-card">
-      <img src="https://images.unsplash.com/photo-1549923746-c502d488b3ea">
-      <div class="content">
-        <h3>La vie à Los Santos</h3>
-        <p>Métiers, activités, immersion RP.</p>
-      </div>
-    </div>
-
-    <div class="wiki-card">
-      <img src="https://images.unsplash.com/photo-1520975916090-3105956dac38">
-      <div class="content">
-        <h3>Événements</h3>
-        <p>Événements RP et animations serveur.</p>
-      </div>
-    </div>
-
-    <div class="wiki-card">
-      <img src="https://images.unsplash.com/photo-1526378722484-bd91ca387e72">
-      <div class="content">
-        <h3>Problèmes techniques</h3>
-        <p>Crashs, bugs, solutions courantes.</p>
-      </div>
-    </div>
-
+<!-- TOP BAR -->
+<header class="topbar">
+  <div class="topbar-left">
+    <strong>📘 Astralium Wiki</strong>
   </div>
 
-  <a class="back-home" href="../index.html">← Retour à l’accueil</a>
+  <div class="topbar-center">
+    <input type="search" placeholder="Rechercher dans le wiki...">
+  </div>
 
-</section>
+  <div class="topbar-right">
+    <a href="../index.html">Accueil</a>
+  </div>
+</header>
+
+<div class="wiki-layout">
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
+    <h3>📚 Catégories</h3>
+
+    <a href="#">🧠 Bien débuter</a>
+    <a href="#">📜 Règlement du serveur</a>
+    <a href="#">🌆 Vie à Los Santos</a>
+    <a href="#">💼 Métiers</a>
+    <a href="#">🔫 Illégal</a>
+    <a href="#">🎉 Événements</a>
+    <a href="#">🛠️ Problèmes techniques</a>
+
+  </aside>
+
+  <!-- CONTENT -->
+  <main class="content">
+
+    <h1>Livres</h1>
+
+    <div class="cards">
+
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1581090700227-1e37b190418e">
+        <h4>Aide</h4>
+        <p>Infos générales pour bien débuter sur Astralium RP.</p>
+      </div>
+
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee">
+        <h4>Événements</h4>
+        <p>Tout sur les événements RP et communautaires.</p>
+      </div>
+
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb">
+        <h4>Vie à Los Santos</h4>
+        <p>Découvrez la ville et ses activités.</p>
+      </div>
+
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1515378791036-0648a3ef77b2">
+        <h4>Nos sites et réseaux</h4>
+        <p>Liens officiels Astralium RP.</p>
+      </div>
+
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1526378722484-bd91ca387e72">
+        <h4>Problèmes techniques</h4>
+        <p>Solutions aux bugs et soucis fréquents.</p>
+      </div>
+
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1524995997946-a1c2e315a42f">
+        <h4>Règlement du serveur</h4>
+        <p>Règles RP et serveur Astralium.</p>
+      </div>
+
+    </div>
+
+  </main>
+</div>
 
 </body>
 </html>

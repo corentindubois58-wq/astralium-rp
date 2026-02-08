@@ -1,0 +1,110 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+body{
+  background:#0b0d12;
+  color:#fff;
+}
+
+/* TOP BAR */
+.topbar{
+  height:60px;
+  background:#1a1d27;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:0 25px;
+}
+
+.topbar a{
+  color:#ff6b6b;
+  text-decoration:none;
+}
+
+.topbar input{
+  padding:8px 14px;
+  border-radius:20px;
+  border:none;
+  width:260px;
+}
+
+/* LAYOUT */
+.wiki-layout{
+  display:flex;
+  min-height:calc(100vh - 60px);
+}
+
+/* SIDEBAR */
+.sidebar{
+  width:260px;
+  background:#11141c;
+  padding:25px;
+}
+
+.sidebar h3{
+  margin-bottom:20px;
+  color:#ff6b6b;
+}
+
+.sidebar a{
+  display:block;
+  padding:12px;
+  color:#ccc;
+  text-decoration:none;
+  border-radius:10px;
+  margin-bottom:8px;
+}
+
+.sidebar a:hover{
+  background:#1f2433;
+  color:#fff;
+}
+
+/* CONTENT */
+.content{
+  flex:1;
+  padding:40px;
+}
+
+.content h1{
+  margin-bottom:30px;
+}
+
+/* CARDS */
+.cards{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:25px;
+}
+
+.card{
+  background:#151926;
+  border-radius:18px;
+  overflow:hidden;
+  transition:.3s;
+}
+
+.card:hover{
+  transform:translateY(-6px);
+  box-shadow:0 15px 40px rgba(0,0,0,.5);
+}
+
+.card img{
+  width:100%;
+  height:160px;
+  object-fit:cover;
+}
+
+.card h4{
+  padding:15px 15px 5px;
+}
+
+.card p{
+  padding:0 15px 20px;
+  font-size:.9rem;
+  color:#bbb;
+}
