@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<title>Wiki – Astralium RP</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="stylesheet" href="../style.css">
+
+<style>
+body{
+  background:#0f121a;
+}
+
+/* LAYOUT */
+.wiki-container{
+  display:grid;
+  grid-template-columns:240px 1fr;
+  gap:40px;
+  padding:140px 60px;
+}
+
+/* SIDEBAR */
+.wiki-sidebar{
+  background:rgba(255,255,255,.04);
+  border-radius:20px;
+  padding:25px;
+  height:fit-content;
+}
+
+.wiki-sidebar h3{
+  margin-bottom:15px;
+  font-size:1.1rem;
+  opacity:.8;
+}
+
+.wiki-sidebar a{
+  display:block;
+  margin:10px 0;
+  color:#ccc;
+  text-decoration:none;
+}
+
+/* CONTENT */
+.wiki-content{
+  background:rgba(255,255,255,.04);
+  border-radius:25px;
+  padding:40px;
+}
+
+.wiki-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:25px;
+}
+
+.wiki-card{
+  background:rgba(255,255,255,.06);
+  border-radius:18px;
+  overflow:hidden;
+  transition:.3s;
+}
+
+.wiki-card:hover{
+  transform:translateY(-6px);
+}
+
+.wiki-card img{
+  width:100%;
+  height:150px;
+  object-fit:cover;
+}
+
+.wiki-card .content{
+  padding:20px;
+}
+
+.wiki-card h4{
+  margin-bottom:8px;
+}
+</style>
+</head>
+
+<body>
+
+<header class="navbar">
+  <div class="logo">ASTR<span>ALIUM</span></div>
+  <nav>
+    <a href="../index.html">Accueil</a>
+    <a href="../reglement.html">Règlement</a>
+    <a href="index.html">Wiki</a>
+    <a href="https://discord.gg/mZQnxRFAZt" target="_blank">Discord</a>
+  </nav>
+</header>
+
+<section class="wiki-container">
+
+  <!-- SIDEBAR -->
+  <aside class="wiki-sidebar">
+    <h3>Livres récents</h3>
+    <a href="#">📘 Aide</a>
+    <a href="#">📅 Événements</a>
+    <a href="#">🌆 La vie à San Andreas</a>
+    <a href="#">🌐 Nos sites et réseaux</a>
+    <a href="#">🛠 Problèmes techniques</a>
+    <a href="#">📜 Règlement du serveur</a>
+  </aside>
+
+  <!-- CONTENT -->
+  <main class="wiki-content">
+    <h2>Livres</h2>
+
+    <div class="wiki-grid">
+
+      <a href="article.html" class="wiki-card">
+        <img src="../photo fond site astraliumrp.jpg">
+        <div class="content">
+          <h4>Aide</h4>
+          <p>Informations générales pour bien débuter.</p>
+        </div>
+      </a>
+
+      <a href="article.html" class="wiki-card">
+        <img src="../photo fond site astraliumrp.jpg">
+        <div class="content">
+          <h4>Événements</h4>
+          <p>Retrouvez les événements du serveur.</p>
+        </div>
+      </a>
+
+      <a href="article.html" class="wiki-card">
+        <img src="../photo fond site astraliumrp.jpg">
+        <div class="content">
+          <h4>La vie à San Andreas</h4>
+          <p>Découvrir l’univers RP.</p>
+        </div>
+      </a>
+
+    </div>
+  </main>
+
+</section>
+
+</body>
+</html>
