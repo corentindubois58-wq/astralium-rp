@@ -1,0 +1,57 @@
+ (cd "$(git rev-parse --show-toplevel)" && git apply --3way <<'EOF' 
+diff --git a/activites-legales.html b/activites-legales.html
+new file mode 100644
+index 0000000000000000000000000000000000000000..2bae64ff56a52478f47c736470cfe97c6958ad4a
+--- /dev/null
++++ b/activites-legales.html
+@@ -0,0 +1,47 @@
++<!DOCTYPE html>
++<html lang="fr">
++<head>
++<meta charset="UTF-8">
++<meta name="viewport" content="width=device-width, initial-scale=1.0">
++<title>Activités légales | Astralium RP</title>
++<link rel="stylesheet" href="pages-gouvernement.css">
++</head>
++<body>
++<header class="navbar">
++  <div class="logo">ASTR<span>ALIUM</span></div>
++  <nav>
++    <a href="index.html">Accueil</a>
++    <a href="reglement.html">Règlement</a>
++    <a href="activites-legales.html" class="active">Activités légales</a>
++    <a href="wiki/index.html">Wiki</a>
++  </nav>
++</header>
++
++<main class="page">
++  <h1>✅ Activités légales</h1>
++  <p class="intro">Les métiers de base suivants te permettent de gagner de l'argent proprement dès ton arrivée.</p>
++
++  <section class="cards">
++    <article class="card">
++      <h2>📦 Livreur</h2>
++      <p>Réalise des livraisons rapides dans toute la ville pour des revenus réguliers.</p>
++      <span class="badge">Métier de base</span>
++    </article>
++
++    <article class="card">
++      <h2>🧹 Agent d'entretien</h2>
++      <p>Nettoie des zones publiques et privées selon les missions proposées.</p>
++      <span class="badge">Métier de base</span>
++    </article>
++
++    <article class="card">
++      <h2>🚚 Routier</h2>
++      <p>Conduit des cargaisons longues distances et développe sa carrière logistique.</p>
++      <span class="badge">Métier de base</span>
++    </article>
++  </section>
++
++  <a class="back" href="index.html">← Retour à l'accueil</a>
++</main>
++</body>
++</html>
+ 
+EOF
+)
