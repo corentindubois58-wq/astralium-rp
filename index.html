@@ -1,55 +1,59 @@
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-<meta charset="UTF-8">
-<title>Astralium RP</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<link rel="stylesheet" href="style.css">
-<script defer src="app.js"></script>
-</head>
-
-<body>
-
-<header class="navbar">
-  <div class="logo">ASTR<span>ALIUM</span></div>
-
-  <nav>
-    <a href="#home">Accueil</a>
-    <a href="reglement.html">Règlement</a>
-
-    <div class="dropdown">
-      <a href="#">Gouvernement ▾</a>
-      <div class="dropdown-content">
-        <a href="service-public.html">Service Public</a>
-        <a href="entreprises.html">Entreprises</a>
-        <a href="activites-legales.html">Activités légales</a>
-        <a href="boutiques.html">Boutiques</a>
-        <a href="mon-espace.html">Mon Espace</a>
-      </div>
-    </div>
-
-    <a href="wiki/index.html">Wiki</a>
-    <a href="https://discord.gg/mZQnxRFAZt" target="_blank">Discord</a>
-  </nav>
-</header>
-
-<section class="hero" id="home">
-  <div class="hero-bg"></div>
-  <div class="hero-content">
-    <h1>ASTRALIUM RP</h1>
-    <p>L’expérience RolePlay nouvelle génération</p>
-
-    <div class="hero-buttons">
-      <a href="https://discord.gg/mZQnxRFAZt" target="_blank" class="btn discord">
-        Discord
-      </a>
-      <a href="#" class="btn play" onclick="checkRules(event)">
-        Jouer maintenant
-      </a>
-    </div>
-  </div>
-</section>
-
-</body>
-</html>
+ (cd "$(git rev-parse --show-toplevel)" && git apply --3way <<'EOF' 
+diff --git a/index.html b/index.html
+index d1b7dd848f475382d858d931b26c7029a4863aed..4e77dc07e1c6695d824ab4c7725f12e6377fccf1 100644
+--- a/index.html
++++ b/index.html
+@@ -2,51 +2,50 @@
+ <html lang="fr">
+ <head>
+ <meta charset="UTF-8">
+ <title>Astralium RP</title>
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ 
+ <link rel="stylesheet" href="style.css">
+ <script defer src="app.js"></script>
+ </head>
+ 
+ <body>
+ 
+ <header class="navbar">
+   <div class="logo">ASTR<span>ALIUM</span></div>
+ 
+   <nav>
+     <a href="#home">Accueil</a>
+     <a href="reglement.html">Règlement</a>
+ 
+     <div class="dropdown">
+       <a href="#">Gouvernement ▾</a>
+       <div class="dropdown-content">
+         <a href="service-public.html">Service Public</a>
+         <a href="entreprises.html">Entreprises</a>
+         <a href="activites-legales.html">Activités légales</a>
+         <a href="mon-espace.html">Mon Espace</a>
+       </div>
+     </div>
+ 
+     <a href="wiki/index.html">Wiki</a>
+     <a href="https://discord.gg/mZQnxRFAZt" target="_blank">Discord</a>
+   </nav>
+ </header>
+ 
+ <section class="hero" id="home">
+   <div class="hero-bg"></div>
+   <div class="hero-content">
+     <h1>ASTRALIUM RP</h1>
+     <p>L’expérience RolePlay nouvelle génération</p>
+ 
+     <div class="hero-buttons">
+       <a href="https://discord.gg/mZQnxRFAZt" target="_blank" class="btn discord">
+         Discord
+       </a>
+       <a href="#" class="btn play" onclick="checkRules(event)">
+         Jouer maintenant
+       </a>
+     </div>
+   </div>
+ </section>
+ 
+EOF
+)
