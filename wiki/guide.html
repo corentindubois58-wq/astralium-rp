@@ -2,57 +2,119 @@
 <html lang="fr">
 <head>
 <meta charset="UTF-8">
-<title>Guide | Astralium Wiki</title>
+<title>Guide Général | Astralium Wiki</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" href="wiki.css">
+<script defer src="wiki.js"></script>
 </head>
 
 <body>
 
+<header class="navbar">
+  <div class="logo">ASTR<span>ALIUM</span></div>
+  <nav>
+    <a href="../index.html">Accueil</a>
+    <a href="../reglement.html">Règlement</a>
+    <a href="index.html">Wiki</a>
+    <a href="https://discord.gg/mZQnxRFAZt" target="_blank">Discord</a>
+  </nav>
+</header>
+
 <div class="layout">
 
-  <!-- MENU GAUCHE -->
+  <!-- SIDEBAR -->
   <aside class="sidebar">
     <h2>📚 Astralium Wiki</h2>
 
-    <input type="text" placeholder="Rechercher...">
+    <input type="text" id="searchInput" placeholder="Rechercher..." onkeyup="searchWiki()">
 
     <nav class="menu">
       <a href="index.html">🏠 Accueil Wiki</a>
       <a href="guide.html" class="active">🎮 Guide Général</a>
       <a href="metiers.html">💼 Métiers</a>
+      <a href="economie.html">💰 Économie</a>
+      <a href="crime.html">🔫 Crime</a>
+      <a href="upgrade.html">📈 Progression</a>
       <a href="faq.html">❓ FAQ</a>
       <a href="lore.html">📖 Lore</a>
     </nav>
 
-    <hr>
-    <a href="../index.html" class="back">⬅ Retour site</a>
   </aside>
 
   <!-- CONTENU -->
   <main class="content">
 
-    <h1>🎮 Guide Général</h1>
+    <h1>🎮 Guide Général Astralium RP</h1>
 
-    <div class="card">
-      <h3>🚀 Comment rejoindre le serveur</h3>
-      <p>
-        Rejoins Astralium RP via la liste FiveM ou l'adresse fournie sur Discord.
-      </p>
+    <div class="server-status">
+      🟢 Serveur RP immersif • Économie dynamique • Progression réaliste
     </div>
 
-    <div class="card">
-      <h3>🧍 Création de personnage</h3>
-      <p>
-        Ton personnage doit être cohérent, réaliste et respecter les règles RP.
-      </p>
+    <h2>🚀 1. Création du personnage</h2>
+    <div class="info-box">
+      Ton personnage doit être cohérent avec le lore et crédible.
+      Évite les noms trolls et les histoires incohérentes.
+    </div>
+    <ul>
+      <li>Choisis une identité réaliste</li>
+      <li>Définis une histoire RP simple</li>
+      <li>Adapte ton comportement à ton rôle</li>
+    </ul>
+
+    <h2>💼 2. Trouver un premier travail</h2>
+    <ul>
+      <li>Taxi</li>
+      <li>Livreur</li>
+      <li>Pêcheur</li>
+      <li>Ouvrier</li>
+    </ul>
+    <div class="info-box">
+      Conseil : Commence légalement pour stabiliser ton économie.
     </div>
 
-    <div class="card">
-      <h3>💬 Interaction RP</h3>
-      <p>
-        Favorise un RP immersif. Évite le NoRP, PowerGaming et MetaGaming.
-      </p>
+    <h2>💰 3. Comprendre l'économie</h2>
+    <ul>
+      <li>Chaque transaction est traçable</li>
+      <li>Les entreprises paient des taxes</li>
+      <li>L'argent sale doit être blanchi</li>
+    </ul>
+
+    <h2>🏛️ 4. Interagir avec le Gouvernement</h2>
+    <ul>
+      <li>Respecter les lois RP</li>
+      <li>Collaborer avec les forces de l'ordre</li>
+      <li>Possibilité d'évolution politique</li>
+    </ul>
+
+    <h2>🔫 5. Voie illégale</h2>
+    <div class="warning-box">
+      Toute activité criminelle comporte des risques : prison, amendes, perte d'équipement.
+    </div>
+    <ul>
+      <li>Braquages</li>
+      <li>Trafic</li>
+      <li>Organisation criminelle</li>
+      <li>Contrôle de territoire</li>
+    </ul>
+
+    <h2>📈 6. Progression</h2>
+    <ul>
+      <li>Évolution professionnelle</li>
+      <li>Création d'entreprise</li>
+      <li>Leadership d'organisation</li>
+      <li>Investissements immobiliers</li>
+    </ul>
+
+    <h2>🤝 7. Règles essentielles RP</h2>
+    <ul>
+      <li>Reste en personnage (RP constant)</li>
+      <li>Pas de méta-gaming</li>
+      <li>Pas de power-gaming</li>
+      <li>Respect des autres joueurs</li>
+    </ul>
+
+    <div class="info-box">
+      Astralium RP repose sur l'immersion, le respect et la cohérence.
     </div>
 
   </main>
