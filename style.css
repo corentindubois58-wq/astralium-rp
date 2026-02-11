@@ -1,4 +1,60 @@
-/* DROPDOWN */
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Segoe UI',sans-serif;
+}
+
+body{
+  background:#0b0d12;
+  color:#fff;
+}
+
+/* NAVBAR */
+.navbar{
+  position:fixed;
+  top:0;
+  width:100%;
+  display:flex;
+  align-items:center;
+  padding:20px 60px;
+  background:rgba(0,0,0,.75);
+  backdrop-filter:blur(12px);
+  z-index:1000;
+}
+
+/* Logo */
+.logo{
+  font-size:1.6rem;
+  font-weight:800;
+  margin-right:auto;
+}
+
+.logo span{
+  color:#ff6b6b;
+}
+
+/* MENU CENTRÉ */
+.navbar nav{
+  position:absolute;
+  left:50%;
+  transform:translateX(-50%);
+  display:flex;
+  align-items:center;
+  gap:35px;
+}
+
+.navbar nav a{
+  color:#ccc;
+  text-decoration:none;
+  transition:.3s;
+}
+
+.navbar nav a:hover{
+  color:#fff;
+}
+
+/* DROPDOWN FIX PRO */
 .dropdown{
   position:relative;
   display:flex;
@@ -12,7 +68,7 @@
 /* MENU */
 .dropdown-content{
   position:absolute;
-  top:100%; /* colle exactement sous le bouton */
+  top:100%;
   left:50%;
   transform:translateX(-50%) translateY(10px);
 
@@ -27,14 +83,12 @@
   transition:all .25s ease;
 }
 
-/* Affichage smooth */
 .dropdown:hover .dropdown-content{
   opacity:1;
   visibility:visible;
   transform:translateX(-50%) translateY(0);
 }
 
-/* Liens */
 .dropdown-content a{
   display:block;
   padding:12px 18px;
@@ -46,4 +100,40 @@
 .dropdown-content a:hover{
   background:#ff6b6b;
   color:white;
+}
+
+/* HERO */
+.hero{
+  height:100vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+}
+
+.hero h1{
+  font-size:5rem;
+}
+
+.hero p{
+  margin-top:15px;
+  opacity:.8;
+}
+
+.btn{
+  padding:12px 25px;
+  border-radius:25px;
+  text-decoration:none;
+  margin:10px;
+  display:inline-block;
+}
+
+.discord{ 
+  background:#5865F2; 
+  color:white; 
+}
+
+.play{ 
+  background:#ff6b6b; 
+  color:white; 
 }
