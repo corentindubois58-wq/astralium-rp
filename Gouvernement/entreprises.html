@@ -1,0 +1,57 @@
+ (cd "$(git rev-parse --show-toplevel)" && git apply --3way <<'EOF' 
+diff --git a/entreprises.html b/entreprises.html
+new file mode 100644
+index 0000000000000000000000000000000000000000..f1d4b7b409b03c035deee4efc9e3e1c33a8524a2
+--- /dev/null
++++ b/entreprises.html
+@@ -0,0 +1,47 @@
++<!DOCTYPE html>
++<html lang="fr">
++<head>
++<meta charset="UTF-8">
++<meta name="viewport" content="width=device-width, initial-scale=1.0">
++<title>Entreprises | Astralium RP</title>
++<link rel="stylesheet" href="pages-gouvernement.css">
++</head>
++<body>
++<header class="navbar">
++  <div class="logo">ASTR<span>ALIUM</span></div>
++  <nav>
++    <a href="index.html">Accueil</a>
++    <a href="reglement.html">Règlement</a>
++    <a href="entreprises.html" class="active">Entreprises</a>
++    <a href="wiki/index.html">Wiki</a>
++  </nav>
++</header>
++
++<main class="page">
++  <h1>🏢 Entreprises</h1>
++  <p class="intro">Liste des métiers de base orientés économie, parfaits pour lancer ton activité légale.</p>
++
++  <section class="cards">
++    <article class="card">
++      <h2>⛏️ Mineur</h2>
++      <p>Récupère des minerais dans les zones d'extraction pour les revendre en ville.</p>
++      <span class="badge">Métier de base</span>
++    </article>
++
++    <article class="card">
++      <h2>🪵 Bûcheron</h2>
++      <p>Coupe et transporte du bois vers les points de traitement et de vente.</p>
++      <span class="badge">Métier de base</span>
++    </article>
++
++    <article class="card">
++      <h2>🎣 Pêcheur</h2>
++      <p>Pêche en bord de mer puis revend les prises aux commerçants locaux.</p>
++      <span class="badge">Métier de base</span>
++    </article>
++  </section>
++
++  <a class="back" href="index.html">← Retour à l'accueil</a>
++</main>
++</body>
++</html>
+ 
+EOF
+)
