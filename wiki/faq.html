@@ -2,23 +2,49 @@
 <html lang="fr">
 <head>
 <meta charset="UTF-8">
-<title>Métiers | Astralium Wiki</title>
+<title>FAQ | Astralium Wiki</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" href="wiki.css">
+<script defer src="wiki.js"></script>
 </head>
 
 <body>
 
+<!-- NAVBAR PRINCIPALE -->
+<header class="navbar">
+  <div class="logo">ASTR<span>ALIUM</span></div>
+
+  <nav>
+    <a href="../index.html">Accueil</a>
+    <a href="../reglement.html">Règlement</a>
+
+    <div class="dropdown">
+      <a href="../gouvernement.html">Gouvernement ▾</a>
+      <div class="dropdown-content">
+        <a href="../service-public.html">Service Public</a>
+        <a href="../entreprises.html">Entreprises</a>
+        <a href="../activites-legales.html">Activités légales</a>
+        <a href="../boutiques.html">Boutiques</a>
+        <a href="../mon-espace.html">Mon Espace</a>
+      </div>
+    </div>
+
+    <a href="index.html">Wiki</a>
+    <a href="https://discord.gg/mZQnxRFAZt" target="_blank">Discord</a>
+  </nav>
+</header>
+
 <div class="layout">
 
+  <!-- SIDEBAR -->
   <aside class="sidebar">
     <h2>📚 Astralium Wiki</h2>
 
     <nav class="menu">
       <a href="index.html">🏠 Accueil Wiki</a>
       <a href="guide.html">🎮 Guide Général</a>
-      <a href="metiers.html" class="active">💼 Métiers</a>
-      <a href="faq.html">❓ FAQ</a>
+      <a href="metiers.html">💼 Métiers</a>
+      <a href="faq.html" class="active">❓ FAQ</a>
       <a href="lore.html">📖 Lore</a>
     </nav>
 
@@ -26,31 +52,36 @@
     <a href="../index.html" class="back">⬅ Retour site</a>
   </aside>
 
+  <!-- CONTENU -->
   <main class="content">
-    <h1>💼 Métiers</h1>
+    <h1>❓ Foire aux Questions</h1>
 
-    <div class="cards">
-
-      <div class="card">
-        <h3>🚓 Police</h3>
-        <p>Maintenir l'ordre et protéger la ville.</p>
+    <div class="faq-item">
+      <button class="faq-question">Comment rejoindre le serveur ?</button>
+      <div class="faq-answer">
+        <p>Vous devez accepter le règlement puis cliquer sur "Jouer maintenant" sur la page d'accueil.</p>
       </div>
+    </div>
 
-      <div class="card">
-        <h3>🚑 EMS</h3>
-        <p>Intervenir lors d'accidents et sauver des vies.</p>
+    <div class="faq-item">
+      <button class="faq-question">Comment rejoindre une entreprise ?</button>
+      <div class="faq-answer">
+        <p>Vous pouvez postuler via le Discord ou contacter directement un responsable en jeu.</p>
       </div>
+    </div>
 
-      <div class="card">
-        <h3>🏪 Commerçant</h3>
-        <p>Gérer une boutique et développer ton entreprise.</p>
+    <div class="faq-item">
+      <button class="faq-question">Que faire en cas de bug ?</button>
+      <div class="faq-answer">
+        <p>Ouvrez un ticket support sur le Discord avec des preuves (vidéo ou capture).</p>
       </div>
+    </div>
 
-      <div class="card">
-        <h3>⚖️ Avocat</h3>
-        <p>Défendre les citoyens devant la justice.</p>
+    <div class="faq-item">
+      <button class="faq-question">Puis-je avoir plusieurs personnages ?</button>
+      <div class="faq-answer">
+        <p>Oui, selon les règles du serveur et sous validation du staff.</p>
       </div>
-
     </div>
 
   </main>
